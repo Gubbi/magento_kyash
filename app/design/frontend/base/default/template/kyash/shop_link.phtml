@@ -1,0 +1,5 @@
+<a href="javascript:void(0);" onclick="pullNearByShops('<?php echo $this->getPostcode() ?>','<?php echo $this->getUrl('kyash/index/getPaymentPoints', array('key'=>false))?>','<?php echo Mage::getBaseUrl('skin').'frontend/default/default/images/opc-ajax-loader.gif';?>')">
+<?php echo Mage::helper('kyash')->__('See nearby shops')?>
+</a>
+<div style="display: none" id="see_nearby_shops_container">
+</div>
