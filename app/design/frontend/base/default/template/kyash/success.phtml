@@ -3,11 +3,15 @@
 $postcode = $this->getPostcode();
 if(empty($postcode))
 	$postcode = 'Enter Pincode';
+
+$dateTime = new DateTime("@".$order->getKyashExpires());
+$dateTime->setTimeZone(new DateTimeZone('Asia/Kolkata'));
+$kc_expires_on = $dateTime->format("j M Y, g:i A");
 ?>
 <div style="clear:both"></div>
 <div class="kyash_succcess_instructions" style="border-top:1px solid #ededed;">
 	<h4><?php echo Mage::helper('kyash')->__('KyashCode:')?> <?php echo $order->getKyashCode()?></h4>
-	<p><?php echo Mage::helper('kyash')->__('KyashCode expires on:')?> <?php echo date("j M Y, g:i A", $order->getExpiresOn()) ?></p>
+	<p><?php echo Mage::helper('kyash')->__('KyashCode expires on:')?> <?php echo $kc_expires_on ?></p>
     <p><?php echo Mage::helper('kyash')->getInstructions()?></p>
 </div>
 <div class="kyash_succcess_instructions">

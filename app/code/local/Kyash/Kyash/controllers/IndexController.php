@@ -6,7 +6,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 		$dirPath = dirname(__FILE__);
 		$dirPath = str_replace('controllers','lib',$dirPath);
 		require_once($dirPath.DS.'KyashPay.php');
-		$api = new KyashPay(Mage::helper('kyash')->getAuthId(),Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
+		$api = new KyashPay(Mage::helper('kyash')->getAuthId(), Mage::helper('kyash')->getAuthPass(), Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
 		$api->setLogger(Mage::helper('kyash'));
 		
 		$params = $this->getRequest()->getParams();
@@ -22,7 +22,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 		{
 			$url = Mage::getUrl('kyash/index/handler', array('key'=>false));
 			$updater = new KyashUpdater($order);
-			$api->handler($params,$order->getKyashCode(),$order->getKyashStatus(),$url,$updater);
+			$api->callback_handler($updater, $order->getKyashCode(),$order->getKyashStatus(),$url);
 		}
     }
 	
@@ -31,7 +31,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 		$dirPath = dirname(__FILE__);
 		$dirPath = str_replace('controllers','lib',$dirPath);
 		require_once($dirPath.DS.'KyashPay.php');
-		$api = new KyashPay(Mage::helper('kyash')->getAuthId(),Mage::helper('kyash')->getAuthPass());
+		$api = new KyashPay(Mage::helper('kyash')->getAuthId(), Mage::helper('kyash')->getAuthPass(), Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
 		$api->setLogger(Mage::helper('kyash'));
 		
 		$pincode = $this->getRequest()->getParam('postcode');
@@ -56,7 +56,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 		$dirPath = dirname(__FILE__);
 		$dirPath = str_replace('controllers','lib',$dirPath);
 		require_once($dirPath.DS.'KyashPay.php');
-		$api = new KyashPay(Mage::helper('kyash')->getAuthId(),Mage::helper('kyash')->getAuthPass());
+		$api = new KyashPay(Mage::helper('kyash')->getAuthId(), Mage::helper('kyash')->getAuthPass(), Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
 		$api->setLogger(Mage::helper('kyash'));
 		
 		$pincode = $this->getRequest()->getParam('postcode');
@@ -81,7 +81,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 		$dirPath = dirname(__FILE__);
 		$dirPath = str_replace('controllers','lib',$dirPath);
 		require_once($dirPath.DS.'KyashPay.php');
-		$api = new KyashPay(Mage::helper('kyash')->getAuthId(),Mage::helper('kyash')->getAuthPass());
+		$api = new KyashPay(Mage::helper('kyash')->getAuthId(), Mage::helper('kyash')->getAuthPass(), Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
 		$api->setLogger(Mage::helper('kyash'));
 		
 		try
@@ -89,7 +89,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 			$incrementId = $this->getCheckout()->getLastRealOrderId();
 			if(empty($incrementId))
 			{
-				$this->getCheckout()->addError($this->__('Fatol Error: Can not load order object.'));
+				$this->getCheckout()->addError($this->__('Fatal Error: Can not load order object.'));
 				$this->_redirect('checkout/cart');
 			}
 			else
@@ -97,7 +97,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 				$order = Mage::getModel('sales/order')->loadByIncrementId($incrementId);
 				if( !(is_object($order) && $order->getId() > 0) )
             	{
-					$this->getCheckout()->addError($this->__('Fatol Error: Can not load order object.'));
+					$this->getCheckout()->addError($this->__('Fatal Error: Can not load order object.'));
 					$this->_redirect('checkout/cart');
 				}
 				else
@@ -114,15 +114,11 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 					}
 					else
 					{
-						$dateTime = new DateTime("@".$response['expires_on']); 
-						$dateTime->setTimeZone(new DateTimeZone('Asia/Kolkata')); 
-						$expires_on = strtotime($dateTime->format("j M Y, g:i A"));
-
 						$order->sendNewOrderEmail();
 						$order->setEmailSent(true);
 						$order->setKyashCode($response['id']);
 						$order->setKyashStatus('pending');
-						$order->setExpiresOn((int) $expires_on);
+						$order->setKyashExpires($response['expires_on']);
 						$order->save();
 						$this->_redirect('checkout/onepage/success');
 					}
