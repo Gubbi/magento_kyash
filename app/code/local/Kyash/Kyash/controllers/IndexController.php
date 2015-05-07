@@ -114,10 +114,15 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 					}
 					else
 					{
+						$dateTime = new DateTime("@".$response['expires_on']); 
+						$dateTime->setTimeZone(new DateTimeZone('Asia/Kolkata')); 
+						$expires_on = strtotime($dateTime->format("j M Y, g:i A"));
+
 						$order->sendNewOrderEmail();
 						$order->setEmailSent(true);
 						$order->setKyashCode($response['id']);
 						$order->setKyashStatus('pending');
+						$order->setExpiresOn((int) $expires_on);
 						$order->save();
 						$this->_redirect('checkout/onepage/success');
 					}

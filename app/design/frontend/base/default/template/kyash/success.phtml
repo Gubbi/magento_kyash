@@ -7,6 +7,7 @@ if(empty($postcode))
 <div style="clear:both"></div>
 <div class="kyash_succcess_instructions" style="border-top:1px solid #ededed;">
 	<h4><?php echo Mage::helper('kyash')->__('KyashCode:')?> <?php echo $order->getKyashCode()?></h4>
+	<p><?php echo Mage::helper('kyash')->__('KyashCode expires on:')?> <?php echo date("j M Y, g:i A", $order->getExpiresOn()) ?></p>
     <p><?php echo Mage::helper('kyash')->getInstructions()?></p>
 </div>
 <div class="kyash_succcess_instructions">

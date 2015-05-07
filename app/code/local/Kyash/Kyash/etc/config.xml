@@ -2,7 +2,7 @@
 <config>
     <modules>
        <Kyash_Kyash>
-          <version>0.1.5</version>
+          <version>0.1.8</version>
        </Kyash_Kyash>
     </modules>
     <frontend>
