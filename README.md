@@ -3,12 +3,12 @@ Magento Integration Kit for the [Kyash Payment Gateway](http://www.kyash.com/).
 
 ## Installation
 1. Login to your `Magento Connect Manager` directly or from Admin dashboard go to<br>
-`System->Magento Connect->Magento Connect Manager`
+`System`->`Magento Connect`->`Magento Connect Manager`
 2. In section `Direct package file upload`, choose package file [magento_kyash.zip](https://github.com/Gubbi/magento_kyash/archive/v1.0.zip) and upload.
 
 
 ## Configuration
-1. After successful upload, from your Admin dashboard go to `System`->`Configuration`->`Sales`->`Payment Methods`. You will find `Kyash` listed as one of the payment method.
+1. After successful upload, from your Admin dashboard go to <br> `System`->`Configuration`->`Sales`->`Payment Methods` <br> You will find `Kyash` listed as one of the payment method.
 2. Enable Kyash plugin and fill your Kyash Account credentials (available in your Kyash Account Settings page).
 3. There are two types of credentials you can enter: 
   - To test the system, use the *Developer* credentials.
