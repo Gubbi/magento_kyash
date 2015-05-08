@@ -6,7 +6,7 @@ class Kyash_Kyash_Model_Observer
 		$dirPath = dirname(__FILE__);
 		$dirPath = str_replace('Model','lib',$dirPath);
 		require_once($dirPath.DS.'KyashPay.php');
-		$api = new KyashPay(Mage::helper('kyash')->getAuthId(),Mage::helper('kyash')->getAuthPass());
+		$api = new KyashPay(Mage::helper('kyash')->getAuthId(), Mage::helper('kyash')->getAuthPass(), Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
 		$api->setLogger(Mage::helper('kyash'));
 		
 		try 
@@ -68,7 +68,7 @@ class Kyash_Kyash_Model_Observer
 		$dirPath = dirname(__FILE__);
 		$dirPath = str_replace('/Model','/lib',$dirPath);
 		require_once($dirPath.DS.'KyashPay.php');
-		$api = new KyashPay(Mage::helper('kyash')->getAuthId(),Mage::helper('kyash')->getAuthPass());
+		$api = new KyashPay(Mage::helper('kyash')->getAuthId(), Mage::helper('kyash')->getAuthPass(), Mage::helper('kyash')->getCallbackPass(),Mage::helper('kyash')->getHmacPass());
 		$api->setLogger(Mage::helper('kyash'));
 		
 		try 
