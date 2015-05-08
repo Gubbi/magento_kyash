@@ -1,6 +1,6 @@
 # magento_kyash
-Magento Integration Kit for the [Kyash Payment Gateway](http://www.kyash.com/).
-Download the latest package [here](https://secure.kyash.com/static/sdk/merchant/magento_kyash-1.0.zip)
+Magento Integration Kit for the [Kyash Payment Gateway](http://www.kyash.com/).<br>
+Download the latest package [here](https://secure.kyash.com/static/sdk/merchant/magento_kyash-1.0.zip).
 
 ## Installation
 1. Login to your `Magento Connect Manager` directly or from Admin dashboard go to<br>
