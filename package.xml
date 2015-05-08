@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
     <name>Magento_Kyash</name>
-    <version>0.1.9</version>
+    <version>0.1.10</version>
     <stability>stable</stability>
     <license>OSL</license>
     <channel>community</channel>
@@ -11,112 +11,8 @@
     <notes>Stable Release</notes>
     <authors><author><name>Kyash</name><user>Kyash</user><email>developers@kyash.com</email></author></authors>
     <date>2015-05-08</date>
-    <time>06:03:03</time>
-    <contents>
-        <target name="magelocal">
-            <dir name="Kyash">
-                <dir name="Kyash">
-                    <dir name="Block">
-                        <dir name="Adminhtml">
-                            <dir name="Renderer">
-                                <file name="Fraudscore.php" hash="bd6b8b7c5257ae4d6793458341b18caa"/>
-                            </dir>
-                            <dir name="Sales">
-                                <dir name="Order">
-                                    <file name="Grid.php" hash="54e15227d92e3e1e675a21a30b9a9efd"/>
-                                    <dir name="View">
-                                        <dir name="Tab">
-                                            <file name="Frauddetection.php" hash="0af121d2c9af77958cd16910e7ea0fef"/>
-                                        </dir>
-                                    </dir>
-                                    <file name=".DS_Store" hash="37ea42de7c23f20a3e5c876990ad0dba"/>
-                                </dir>
-                                <file name=".DS_Store" hash="0637a5982207b2f2b557252f95aa2b2d"/>
-                            </dir>
-                            <dir name="System">
-                                <dir name="Config">
-                                    <file name="Callbackurl.php" hash="e551a54a5a59d611d0ddd9a9aacbc24f"/>
-                                </dir>
-                                <file name=".DS_Store" hash="60d450ab59b771a3c283579b2d35d28e"/>
-                            </dir>
-                            <file name=".DS_Store" hash="0aed8f04ade6dc1a51d4afb648607d76"/>
-                        </dir>
-                        <file name="Form.php" hash="672aa9b72447dbe76b781807cf268d51"/>
-                        <file name="Info.php" hash="c764fab9d4d77394feb5ce90f74bad14"/>
-                        <file name="Success.php" hash="f69b36f16d72cebb2a687d65998a7665"/>
-                    </dir>
-                    <dir name="controllers">
-                        <file name="IndexController.php" hash="a9e9beda68c32aa44bacde45d0b1bcee"/>
-                    </dir>
-                    <dir name="etc">
-                        <file name="config.xml" hash="28438e98b0295601c57fd1a04e065d5b"/>
-                        <file name="system.xml" hash="f62a981ccc0b91c7d097b7f9d0923910"/>
-                    </dir>
-                    <dir name="Helper">
-                        <file name="Data.php" hash="80d99f8af55b91909fbe335234539c09"/>
-                    </dir>
-                    <dir name="lib">
-                        <file name="cacert.pem" hash="792130b5c23502328d7375e460fe5ba4"/>
-                        <file name="KyashPay.php" hash="936bacaa295596bdf7626d1843c7488c"/>
-                    </dir>
-                    <dir name="Model">
-                        <file name="Kyash.php" hash="ff0f393d78ebf061cba8052bcef81e97"/>
-                        <file name="Observer.php" hash="a199d8bb55efd99238c75369ad365a59"/>
-                    </dir>
-                    <dir name="sql">
-                        <dir name="kyash_setup">
-                            <file name="mysql4-install-0.1.9.php" hash="537deb64454bd5ceeb625d285308b203"/>
-                        </dir>
-                    </dir>
-                </dir>
-            </dir>
-        </target>
-        <target name="mageetc">
-            <dir name="modules">
-                <file name="Kyash_Kyash.xml" hash="658d44c7a1f5acab9d0df9d2f35acd84"/>
-            </dir>
-        </target>
-        <target name="magedesign">
-            <dir name="frontend">
-                <dir name="base">
-                    <dir name="default">
-                        <dir name="template">
-                            <dir name="kyash">
-                                <file name="error.phtml" hash="2464fff336b979608a775d18606faae3"/>
-                                <file name="form.phtml" hash="d41d8cd98f00b204e9800998ecf8427e"/>
-                                <file name="payment_points_2.phtml" hash="acad348b85dc85e0576c9e46357fea6f"/>
-                                <file name="payment_points.phtml" hash="0b040a97ba0f8c358f8d9548b18f6f0e"/>
-                                <file name="shop_link.phtml" hash="f0083462aa6958a10cc0b1eaa5991d12"/>
-                                <file name="shops.phtml" hash="5ceaf68a81e784d3474a9ce04710279b"/>
-                                <file name="success.phtml" hash="039b9979c69aab103021e74ce4ee57a3"/>
-                            </dir>
-                        </dir>
-                        <dir name="layout">
-                            <file name="kyash.xml" hash="92a399a8fe64de41f2811ed1f95615cb"/>
-                        </dir>
-                    </dir>
-                </dir>
-            </dir>
-        </target>
-        <target name="mageskin">
-            <dir name="frontend">
-                <dir name="base">
-                    <dir name="default">
-                        <dir name="kyash">
-                            <dir name="css">
-                                <file name="kyask.css" hash="c918246b66ac4e69a4241985c2e741ae"/>
-                            </dir>
-                            <dir name="js">
-                                <file name="checkout.js" hash="ae84b3eb086f878bc336cb0ae20ef666"/>
-                                <file name="jquery.js" hash="d70b30254be7e9032c3422dc00d86634"/>
-                                <file name="success.js" hash="92e9e506132072b336e97a6b66c90c1f"/>
-                            </dir>
-                        </dir>
-                    </dir>
-                </dir>
-            </dir>
-        </target>
-    </contents>
+    <time>07:49:58</time>
+    <contents><target name="magelocal"><dir name="Kyash"><dir name="Kyash"><dir name="Block"><dir name="Adminhtml"><dir name="Renderer"><file name="Fraudscore.php" hash="bd6b8b7c5257ae4d6793458341b18caa"/></dir><dir name="Sales"><dir name="Order"><file name="Grid.php" hash="54e15227d92e3e1e675a21a30b9a9efd"/><dir name="View"><dir name="Tab"><file name="Frauddetection.php" hash="0af121d2c9af77958cd16910e7ea0fef"/></dir></dir><file name=".DS_Store" hash="37ea42de7c23f20a3e5c876990ad0dba"/></dir><file name=".DS_Store" hash="0637a5982207b2f2b557252f95aa2b2d"/></dir><dir name="System"><dir name="Config"><file name="Callbackurl.php" hash="e551a54a5a59d611d0ddd9a9aacbc24f"/></dir><file name=".DS_Store" hash="60d450ab59b771a3c283579b2d35d28e"/></dir><file name=".DS_Store" hash="0aed8f04ade6dc1a51d4afb648607d76"/></dir><file name="Form.php" hash="672aa9b72447dbe76b781807cf268d51"/><file name="Info.php" hash="c764fab9d4d77394feb5ce90f74bad14"/><file name="Success.php" hash="f69b36f16d72cebb2a687d65998a7665"/></dir><dir name="controllers"><file name="IndexController.php" hash="0ab1d25e3cd4ca957e86997c904120e8"/></dir><dir name="etc"><file name="config.xml" hash="c5e08e86c8d72901d6c90fe8a152c4fc"/><file name="system.xml" hash="f62a981ccc0b91c7d097b7f9d0923910"/></dir><dir name="Helper"><file name="Data.php" hash="80d99f8af55b91909fbe335234539c09"/></dir><dir name="lib"><file name="cacert.pem" hash="792130b5c23502328d7375e460fe5ba4"/><file name="KyashPay.php" hash="451300792cff73887a55e0680acc097a"/></dir><dir name="Model"><file name="Kyash.php" hash="ff0f393d78ebf061cba8052bcef81e97"/><file name="Observer.php" hash="a199d8bb55efd99238c75369ad365a59"/></dir><dir name="sql"><dir name="kyash_setup"><file name="mysql4-install-0.1.10.php" hash="537deb64454bd5ceeb625d285308b203"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Kyash_Kyash.xml" hash="658d44c7a1f5acab9d0df9d2f35acd84"/></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="kyash"><file name="error.phtml" hash="2464fff336b979608a775d18606faae3"/><file name="form.phtml" hash="d41d8cd98f00b204e9800998ecf8427e"/><file name="payment_points_2.phtml" hash="acad348b85dc85e0576c9e46357fea6f"/><file name="payment_points.phtml" hash="0b040a97ba0f8c358f8d9548b18f6f0e"/><file name="shop_link.phtml" hash="f0083462aa6958a10cc0b1eaa5991d12"/><file name="shops.phtml" hash="5ceaf68a81e784d3474a9ce04710279b"/><file name="success.phtml" hash="96405798dfdb9fac96725feff8f41265"/></dir></dir><dir name="layout"><file name="kyash.xml" hash="aa64df366873f4b0aac6659942f0881e"/></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="kyash"><dir name="css"><file name="kyash.css" hash="c918246b66ac4e69a4241985c2e741ae"/></dir><dir name="js"><file name="checkout.js" hash="ae84b3eb086f878bc336cb0ae20ef666"/><file name="jquery.js" hash="d70b30254be7e9032c3422dc00d86634"/><file name="success.js" hash="92e9e506132072b336e97a6b66c90c1f"/></dir></dir></dir></dir></dir></target></contents>
     <compatible/>
     <dependencies><required><php><min>5.0.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

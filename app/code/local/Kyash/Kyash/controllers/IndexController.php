@@ -104,7 +104,7 @@ class Kyash_Kyash_IndexController extends Mage_Core_Controller_Front_Action
 				{
 					$params = Mage::helper('kyash')->getOrderParams($order);
 					$response = $api->createKyashCode($params);
-					if(isset($response['status']) && $response['status'] == 'error')
+					if(!$response || (isset($response['status']) && $response['status'] == 'error'))
 					{
 						$order->setState(Mage_Sales_Model_Order::STATE_CANCELED, Mage_Sales_Model_Order::STATE_CANCELED,$this->__('The order was canceled.'));
 						$order->save();

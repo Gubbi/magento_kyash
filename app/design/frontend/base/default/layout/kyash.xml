@@ -4,14 +4,14 @@
 		 <reference name="head">
             <action method="addItem"><type>skin_js</type><name>kyash/js/jquery.js</name></action>
             <action method="addItem"><type>skin_js</type><name>kyash/js/checkout.js</name></action>
-            <action method="addItem"><type>skin_css</type><name>kyash/css/kyask.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>kyash/css/kyash.css</name></action>
         </reference>
 	</checkout_onepage_index>
 	<checkout_onepage_success translate="label">
 		<reference name="head">
             <action method="addItem"><type>skin_js</type><name>kyash/js/jquery.js</name></action>
             <action method="addItem"><type>skin_js</type><name>kyash/js/success.js</name></action>
-            <action method="addItem"><type>skin_css</type><name>kyash/css/kyask.css</name></action>
+            <action method="addItem"><type>skin_css</type><name>kyash/css/kyash.css</name></action>
         </reference>
         <reference name="content">
 			<block type='kyash/success' name='child' template='kyash/success.phtml'/>

@@ -4,7 +4,8 @@ $postcode = $this->getPostcode();
 if(empty($postcode))
 	$postcode = 'Enter Pincode';
 
-$dateTime = new DateTime("@".$order->getKyashExpires());
+$dateTime = new DateTime();
+$dateTime->setTimestamp($order->getKyashExpires());
 $dateTime->setTimeZone(new DateTimeZone('Asia/Kolkata'));
 $kc_expires_on = $dateTime->format("j M Y, g:i A");
 ?>
