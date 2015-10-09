@@ -16,10 +16,10 @@ $kc_expires_on = $dateTime->format("j M Y, g:i A");
     <p><?php echo Mage::helper('kyash')->getInstructions()?></p>
 </div>
 <div class="kyash_succcess_instructions">
-	<input type="text" class="input-text" id="postcode" value="<?php echo $postcode?>" maxlength="12" style="width:120px; text-align:center" onblur="if(this.value ==''){this.value='Enter Pincode';}" onclick="if(this.value == 'Enter Pincode'){this.value='';}" />
-    <button onclick="preparePullShops()" class="button" type="button" style="padding:5px; margin-top:-4px">
-    	<span><span><?php echo Mage::helper('kyash')->__('See nearby shops')?></span></span>
-    </button>
+	<input type="hidden" class="input-text" id="postcode" value="<?php echo $postcode?>" maxlength="12" style="width:120px; text-align:center" onblur="if(this.value ==''){this.value='Enter Pincode';}" onclick="if(this.value == 'Enter Pincode'){this.value='';}" />
+<!--    <button onclick="preparePullShops()" class="button" type="button" style="padding:5px; margin-top:-4px">-->
+<!--    	<span><span>--><?php //echo Mage::helper('kyash')->__('See nearby shops')?><!--</span></span>-->
+<!--    </button>-->
 </div>
 <div style="display: none" id="see_nearby_shops_container2">
 </div>

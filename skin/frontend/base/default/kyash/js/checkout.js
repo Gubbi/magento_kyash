@@ -30,10 +30,10 @@ $jKyash(document).ready(function(){
 
 function openShops(url,loader)
 {
-	$jKyash('#kyash_postcode_payment').parent().removeAttr('for');
-	$jKyash('#kyash_postcode').removeAttr('disabled');
-	$jKyash('#kyash_postcode_button').removeAttr('disabled');
-	$jKyash('#kyash_postcode_payment_sub').show();
+	//$jKyash('#kyash_postcode_payment').parent().removeAttr('for');
+	//$jKyash('#kyash_postcode').removeAttr('disabled');
+	//$jKyash('#kyash_postcode_button').removeAttr('disabled');
+	//$jKyash('#kyash_postcode_payment_sub').show();
 	$jKyash('#see_nearby_shops_container').hide();
 	document.getElementById('p_method_kyash').checked = true;
 	$jKyash('#kyash_open').hide();
