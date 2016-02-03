@@ -1,5 +1,5 @@
 #see_nearby_shops_container{
-	max-height:310px;
+	/*max-height:310px;*/
 	overflow:auto;
 }
 
@@ -66,10 +66,9 @@
 }
 
 #see_nearby_shops_container2{
-	width: 80%;
+	/*width: 80%;*/
 	min-width: 250px;
 	margin: 12px auto 32px;
-	border-left: 1px solid;
-	max-height:310px;
+	/*max-height:310px;*/
 	overflow:auto;
 }

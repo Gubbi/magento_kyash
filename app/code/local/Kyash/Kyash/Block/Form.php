@@ -7,7 +7,7 @@ class Kyash_Kyash_Block_Form extends Mage_Payment_Block_Form
         $shops = new $shops;
         $shops->setTemplate('kyash/shops.phtml')
 			->setPostcode($this->getPostcode());
-            
+
         $this->setTemplate('kyash/form.phtml')
             ->setMethodLabelAfterHtml($shops->toHtml());
 

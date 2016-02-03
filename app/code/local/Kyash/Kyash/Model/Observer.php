@@ -62,7 +62,8 @@ class Kyash_Kyash_Model_Observer
 			Mage::getSingleton('adminhtml/session')->addError($message);
 		}
 	}
-	
+
+    /*
 	public function shipped(Varien_Event_Observer $observer)
 	{
 		$dirPath = dirname(__FILE__);
@@ -119,4 +120,5 @@ class Kyash_Kyash_Model_Observer
 			Mage::getSingleton('adminhtml/session')->addError($message);
 		}
 	}
+    */
 }

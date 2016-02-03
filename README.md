@@ -18,7 +18,7 @@ Download the latest package [here](https://secure.kyash.com/static/sdk/merchant/
 5. Copy the *Callback URL* (e.g. `http://www.yourstore.com/?action=kyash-handler`) to your Kyash Account Settings and click `Set` to update the callback URL.
 
 ## Testing the Integration.
-1. Place an order from your Woocommerce store.
+1. Place an order from your Magento store.
 2. Pick *Kyash - Pay at a nearby shop* as the payment option.
 3. Note down the *KyashCode* generated for this order.
 4. In a live system, the customer will take this KyashCode to a nearby shop and make the payment using cash.

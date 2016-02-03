@@ -1,14 +1,13 @@
-<?php 
+<?php
 $postcode = $this->getPostcode();
 if(empty($postcode))
 	$postcode = 'Enter Pincode';
 ?>
 <span id="kyash_postcode_payment">
-    <a href="javascript:void(0);" onclick="openShops('<?php echo $this->getUrl('kyash/index/getPaymentPoints', array('key'=>false))?>','<?php echo Mage::getBaseUrl('skin').'frontend/default/default/images/opc-ajax-loader.gif';?>')" id="kyash_open">
+    <!--a href="javascript:void(0);" onclick="openShops('<?php echo $this->getUrl('kyash/index/getPaymentPoints', array('key'=>false))?>','<?php echo Mage::getBaseUrl('skin').'frontend/default/default/images/opc-ajax-loader.gif';?>')" id="kyash_open">
     <?php echo Mage::helper('kyash')->__('See nearby shops')?>
-    </a>
-   
-    <span id="kyash_postcode_payment_sub">
+    </a-->
+    <span id="kyash_postcode_payment_sub" style="display: none">
         <input type="text" class="input-text" id="kyash_postcode" value="<?php echo $postcode ?>" maxlength="12" />
         <button id="kyash_postcode_button" onclick="pullNearByShops('<?php echo $this->getUrl('kyash/index/getPaymentPoints', array('key'=>false))?>','<?php echo Mage::getBaseUrl('skin').'frontend/default/default/images/opc-ajax-loader.gif';?>')" class="button" type="button">
     		<span><span><?php echo Mage::helper('kyash')->__('See Nearby Shops')?></span></span>
@@ -18,5 +17,9 @@ if(empty($postcode))
         </a>
     </span>
 </span>
-<div style="display: none" id="see_nearby_shops_container">
+<div style="" id="see_nearby_shops_container">
 </div>
+<p id="kyash_payment_instructions">Product will be sent to the shipping address only after payment. If order is cancelled or not delivered, you can avail refund as per our policies.</p>
+<script>
+    KyashJS.updatePincode('#see_nearby_shops_container', '<?php echo Mage::helper('kyash')->getAuthId()?>', '<?php echo $postcode ?>' )
+</script>

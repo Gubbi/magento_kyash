@@ -1,17 +1,20 @@
 $jKyash = jQuery.noConflict();
 
-var pincodePlaceHolder = 'Enter Pincode';
+//var pincodePlaceHolder = 'Enter Pincode';
 
 $jKyash(document).ready(function(){
 	$jKyash('input[id^="p_method_"]').live('click',function(){
-		if($jKyash(this).val() != 'kyash')
-		{
-			$jKyash('#kyash_postcode_payment_sub').hide();
-			$jKyash('#see_nearby_shops_container').hide();
-			$jKyash('#kyash_open').show();
-		}
+        if ($jKyash(this).val() != "kyash") {
+            $jKyash("#see_nearby_shops_container").hide();
+            $jKyash("#kyash_payment_instructions").hide();
+        }
+        else {
+            $jKyash("#see_nearby_shops_container").show();
+            $jKyash("#kyash_payment_instructions").show();
+        }
 	});
-	
+
+    /*
 	$jKyash('#kyash_postcode').live('focus',function(){
 		if($jKyash(this).val() == pincodePlaceHolder)
 		{
@@ -25,9 +28,10 @@ $jKyash(document).ready(function(){
 			$jKyash(this).val(pincodePlaceHolder);
 		}
 	});
+	*/
 	
 });
-
+/*
 function openShops(url,loader)
 {
 	//$jKyash('#kyash_postcode_payment').parent().removeAttr('for');
@@ -87,3 +91,4 @@ function pullNearByShops(url,loader)
 		}
 	}
 }
+*/
