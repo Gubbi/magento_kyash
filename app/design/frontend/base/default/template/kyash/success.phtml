@@ -9,28 +9,8 @@ $dateTime->setTimestamp($order->getKyashExpires());
 $dateTime->setTimeZone(new DateTimeZone('Asia/Kolkata'));
 $kc_expires_on = $dateTime->format("j M Y, g:i A");
 ?>
-<div style="clear:both"></div>
-<div class="kyash_succcess_instructions" style="display: none; border-top:1px solid #ededed;">
-	<h4><?php echo Mage::helper('kyash')->__('KyashCode:')?> <?php echo $order->getKyashCode()?></h4>
-	<p><?php echo Mage::helper('kyash')->__('KyashCode expires on:')?> <?php echo $kc_expires_on ?></p>
-    <p><?php echo Mage::helper('kyash')->getInstructions()?></p>
-</div>
-<div class="kyash_succcess_instructions" style="display: none;">
-	<input type="hidden" class="input-text" id="postcode" value="<?php echo $postcode?>" maxlength="12" style="width:120px; text-align:center" onblur="if(this.value ==''){this.value='Enter Pincode';}" onclick="if(this.value == 'Enter Pincode'){this.value='';}" />
-<!--    <button onclick="preparePullShops()" class="button" type="button" style="padding:5px; margin-top:-4px">-->
-<!--    	<span><span>--><?php //echo Mage::helper('kyash')->__('See nearby shops')?><!--</span></span>-->
-<!--    </button>-->
-</div>
 <div style="" id="see_nearby_shops_container2">
     <script src="//localhost:8080/outlets.js"></script>
     <kyash:code div="#see_nearby_shops_container" merchant_id="<?php echo Mage::helper('kyash')->getAuthId()?>" postal_code="<?php echo $postcode ?>" kyash_code="<?php echo $order->getKyashCode()?>"></kyash:code>
 </div>
-<!--script>
-preparePullShops();
-function preparePullShops()
-{
-	var postcode = document.getElementById('postcode').value;
-	pullNearByShops(postcode,'<?php echo $this->getUrl('kyash/index/getPaymentPoints2', array('key'=>false))?>','<?php echo Mage::getBaseUrl('skin').'frontend/default/default/images/opc-ajax-loader.gif';?>');
-}
-</script-->
 <?php endif;?>

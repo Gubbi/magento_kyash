@@ -8,7 +8,6 @@
         </reference>
         <reference name="content">
             <block type="core/text" name="child">
-                <!--action method="setMethodFormTemplate"><method>purchaseorder</method><template>kyash/shops.phtml</template></action-->
                 <action method="setText">
                     <text>
                         <![CDATA[<script type="text/javascript" src="//secure.kyash.in/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
@@ -17,7 +16,6 @@
             </block>
             <block type="checkout/onepage_payment" name="checkout.onepage.payment" as="payment" template="checkout/onepage/payment.phtml">
                 <block type="core/text" name="child">
-                    <!--action method="setMethodFormTemplate"><method>purchaseorder</method><template>kyash/shops.phtml</template></action-->
                     <action method="setText">
                         <text>
                             <![CDATA[<script type="text/javascript" src="//secure.kyash.in/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
@@ -26,7 +24,6 @@
                 </block>
                 <block type="checkout/onepage_payment_methods" name="checkout.payment.methods" as="methods" template="checkout/onepage/payment/info.phtml">
                     <block type="core/text" name="child">
-                        <!--action method="setMethodFormTemplate"><method>purchaseorder</method><template>kyash/shops.phtml</template></action-->
                         <action method="setText">
                             <text>
                                 <![CDATA[<script type="text/javascript" src="//localhost:8080/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
