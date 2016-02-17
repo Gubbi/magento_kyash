@@ -96,7 +96,7 @@
 			<kyash>
 				<active>0</active>
                 <model>kyash/kyash</model>
-                <title>Kyash - Pay at a nearby Shop</title>
+                <title>Pay by cash at a shop near me</title>
 				<allowspecific>0</allowspecific>
 				<instructions><![CDATA[Please pay at any of the authorized outlets before expiry. <br/>You need to mention only the KyashCode and may be asked for your mobile number during payment. No other details needed. <br/>Please wait for the confirmation SMS after payment. Remember to take a payment receipt. <br/>You can verify the payment status anytime by texting this KyashCode to +91 9243710000]]></instructions>
 			</kyash>

@@ -26,7 +26,7 @@
                     <block type="core/text" name="child">
                         <action method="setText">
                             <text>
-                                <![CDATA[<script type="text/javascript" src="//localhost:8080/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+                                <![CDATA[<script type="text/javascript" src="//secure.kyash.in/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
                             </text>
                         </action>
                     </block>

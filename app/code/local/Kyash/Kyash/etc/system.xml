@@ -82,15 +82,6 @@ one HMAC Secret is generated per Merchant. It can be changed from your account.<
                             <show_in_store>1</show_in_store>
 							<tooltip>When customer makes a payment at one of our Payment Points, Kyash will notify the Merchant Server using a HTTP request, in real time. The Merchant needs to implement a callback handler which will authenticate the information sent from Kyash and use the information as needed. The callback URL can be configured in your Kyash Account Settings at My Account -> Merchant. The request sent from Kyash will use POST request method.</tooltip>
                         </callback_url>
-						<instructions translate="label">
-                            <label>Instructions</label>
-                            <frontend_type>textarea</frontend_type>
-                            <sort_order>10</sort_order>
-                            <show_in_default>1</show_in_default>
-                            <show_in_website>1</show_in_website>
-                            <show_in_store>1</show_in_store>
-							<tooltip>Instructions on how to make the payment displayed on thank you page</tooltip>
-                        </instructions>
                          <allowspecific translate="label">
                             <label>Payment from Applicable Countries</label>
                             <frontend_type>allowspecific</frontend_type>

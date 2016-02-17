@@ -21,12 +21,7 @@ class Kyash_Kyash_Helper_Data extends Mage_Core_Helper_Abstract
 	{
 		return trim(Mage::getStoreConfig('payment/kyash/hmac_secret'));
 	}
-	
-	public function getInstructions()
-	{
-		return nl2br(Mage::getStoreConfig('payment/kyash/instructions'));
-	}
-	
+
 	public function canLog()
 	{
 		return KYASH_LOG;
