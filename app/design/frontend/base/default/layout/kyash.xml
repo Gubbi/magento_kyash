@@ -1,16 +1,43 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
 	<checkout_onepage_index translate="label">
-		 <reference name="head">
+		<reference name="head">
             <action method="addItem"><type>skin_js</type><name>kyash/js/jquery.js</name></action>
             <action method="addItem"><type>skin_js</type><name>kyash/js/checkout.js</name></action>
             <action method="addItem"><type>skin_css</type><name>kyash/css/kyash.css</name></action>
+        </reference>
+        <reference name="content">
+            <block type="core/text" name="child">
+                <action method="setText">
+                    <text>
+                        <![CDATA[<script type="text/javascript" src="//secure.kyash.in/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+                    </text>
+                </action>
+            </block>
+            <block type="checkout/onepage_payment" name="checkout.onepage.payment" as="payment" template="checkout/onepage/payment.phtml">
+                <block type="core/text" name="child">
+                    <action method="setText">
+                        <text>
+                            <![CDATA[<script type="text/javascript" src="//secure.kyash.in/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+                        </text>
+                    </action>
+                </block>
+                <block type="checkout/onepage_payment_methods" name="checkout.payment.methods" as="methods" template="checkout/onepage/payment/info.phtml">
+                    <block type="core/text" name="child">
+                        <action method="setText">
+                            <text>
+                                <![CDATA[<script type="text/javascript" src="//secure.kyash.in/outlets.js"></script><script type="text/javascript">jQuery.noConflict();</script>]]>
+                            </text>
+                        </action>
+                    </block>
+                </block>
+            </block>
         </reference>
 	</checkout_onepage_index>
 	<checkout_onepage_success translate="label">
 		<reference name="head">
             <action method="addItem"><type>skin_js</type><name>kyash/js/jquery.js</name></action>
-            <action method="addItem"><type>skin_js</type><name>kyash/js/success.js</name></action>
+            <!--action method="addItem"><type>skin_js</type><name>kyash/js/success.js</name></action-->
             <action method="addItem"><type>skin_css</type><name>kyash/css/kyash.css</name></action>
         </reference>
         <reference name="content">
