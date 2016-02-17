@@ -69,14 +69,6 @@
                    </sales_order_save_after_kyash>
                </observers>
             </sales_order_payment_cancel>
-			<sales_order_shipment_save_after>
-               <observers>
-                   <sales_order_shipment_save_after_kyash>
-                       <class>kyash/observer</class>
-                       <method>shipped</method>
-                   </sales_order_shipment_save_after_kyash>
-               </observers>
-            </sales_order_shipment_save_after>
         </events>
     </global>
     <admin>
