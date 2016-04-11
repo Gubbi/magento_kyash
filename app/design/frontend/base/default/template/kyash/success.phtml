@@ -10,7 +10,7 @@ $dateTime->setTimeZone(new DateTimeZone('Asia/Kolkata'));
 $kc_expires_on = $dateTime->format("j M Y, g:i A");
 ?>
 <div style="" id="see_nearby_shops_container2">
-    <script src="//localhost:8080/outlets.js"></script>
+    <script src="//secure.kyash.in/outlets.js"></script>
     <kyash:code div="#see_nearby_shops_container" merchant_id="<?php echo Mage::helper('kyash')->getAuthId()?>" postal_code="<?php echo $postcode ?>" kyash_code="<?php echo $order->getKyashCode()?>"></kyash:code>
 </div>
 <?php endif;?>
