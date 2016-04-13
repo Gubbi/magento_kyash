@@ -5,7 +5,7 @@ Download the latest package [here](https://github.com/Gubbi/magento_kyash/releas
 ## Installation
 1. Login to your `Magento Connect Manager` directly or from Admin dashboard go to<br>
 `System`->`Magento Connect`->`Magento Connect Manager`
-2. In section `Direct package file upload`, choose package file [magento_kyash.zip](https://github.com/Gubbi/magento_kyash/releases/download/v1.21/magento_kyash-1.21.tgz) and upload.
+2. In section `Direct package file upload`, choose package file [magento_kyash.tgz](https://github.com/Gubbi/magento_kyash/releases/download/v1.21/magento_kyash-1.21.tgz) and upload.
 
 
 ## Configuration
